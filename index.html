@@ -7,21 +7,21 @@
     <style>
         body {
             background-color: black;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
             margin: 0;
             color: white;
             font-family: Arial, sans-serif;
+            height: 100vh;
         }
         .button-container {
+            position: absolute;
+            top: 20px;
+            left: 20px;
             display: flex;
             gap: 20px;
         }
         button {
-            padding: 10px 20px;
-            font-size: 16px;
+            padding: 20px 40px;
+            font-size: 20px;
             color: white;
             background-color: red;
             border: none;
@@ -37,7 +37,7 @@
 <body>
     <div class="button-container">
         <button onclick="location.href='index.html'">Home</button>
-        <button onclick="location.href='file.zip'">Download</button>
+        <button onclick="location.href='download.html'">Download</button>
     </div>
 </body>
 </html>
