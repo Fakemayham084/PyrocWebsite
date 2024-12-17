@@ -7,16 +7,18 @@
     <style>
         body {
             background-color: black;
+            display: flex;
+            justify-content: flex-start;
+            align-items: flex-start;
+            padding: 20px;
+            height: 100vh;
             margin: 0;
             color: white;
             font-family: Arial, sans-serif;
-            height: 100vh;
         }
         .button-container {
-            position: absolute;
-            top: 20px;
-            left: 20px;
             display: flex;
+            flex-direction: column;
             gap: 20px;
         }
         button {
@@ -33,11 +35,25 @@
             background-color: darkred;
         }
     </style>
+    <script>
+        function redirectBasedOnOS() {
+            const platform = navigator.platform.toLowerCase();
+            if (platform.includes("win")) {
+                location.href = "downloadWin.html";
+            } else if (platform.includes("mac")) {
+                location.href = "downloadMac.html";
+            } else if (platform.includes("linux")) {
+                location.href = "downloadLinux.html";
+            } else {
+                location.href = "unknownOS.html";
+            }
+        }
+    </script>
 </head>
 <body>
     <div class="button-container">
         <button onclick="location.href='index.html'">Home</button>
-        <button onclick="location.href='download.html'">Download</button>
+        <button onclick="redirectBasedOnOS()">Download</button>
     </div>
 </body>
 </html>
