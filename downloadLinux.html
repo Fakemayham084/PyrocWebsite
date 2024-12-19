@@ -36,7 +36,17 @@
     </style>
 </head>
 <body>
-    <h1>Download Pyroc for Linux</h1>
-    <button onclick="location.href='linux-file.zip'">Download</button>
+    <h1>Download for Linux</h1>
+    <button id="download-btn">Download Linux File</button>
+    <script>
+        document.getElementById('download-btn').addEventListener('click', function () {
+            const a = document.createElement('a');
+            <a href="https://raw.githubusercontent.com/Fakemayham084/PyrocWebsite/main/linux-file.zip" download>Download Linux File</a>
+            a.download = 'linux-file.sh';
+            document.body.appendChild(a);
+            a.click();
+            document.body.removeChild(a);
+        });
+    </script>
 </body>
 </html>
